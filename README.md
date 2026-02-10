@@ -1,6 +1,17 @@
 Microsoft have stopped supporting this library. This SH:24 fork exists to
 upgrade Faraday to 2.x to deal with some security flaws in Faraday 1.x.
 
+Note that this library is only compatible with Ruby 3.4+
+
+To use from this repo add the following to your Gemspec:
+
+```ruby
+github 'sh24/azure-storage-ruby', glob: '*/*.gemspec' do
+  gem 'azure-storage-blob'
+  gem 'azure-storage-common'
+end
+```
+
 # Microsoft Azure Storage Client Library for Ruby (Deprecated)
 
 This project will be in

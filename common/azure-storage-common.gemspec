@@ -39,7 +39,7 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files ./lib/azure/storage/common/`.split("\n") << "./lib/azure/storage/common.rb"
   s.files       += `git ls-files ./lib/azure/core/`.split("\n") << "./lib/azure/core.rb" << "./lib/azure/http_response_helper.rb"
 
-  s.required_ruby_version = ">= 2.3.0"
+  s.required_ruby_version = ">= 3.3.0"
 
   s.add_runtime_dependency('faraday',                     '~> 2.0')
   s.add_runtime_dependency('faraday-follow_redirects',    '~> 0.5')
@@ -54,4 +54,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency("timecop",                 "~> 0.7")
   s.add_development_dependency("yard",                    "~> 0.9", ">= 0.9.11")
   s.add_development_dependency('bundler',                 '~> 1.11')
+  s.add_development_dependency('base64',                  '~> 0.3')
 end

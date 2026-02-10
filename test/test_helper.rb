@@ -32,6 +32,7 @@ ENV["AZURE_STORAGE_CONNECTION_STRING"] = "DefaultEndpointsProtocol=https;Account
 require "minitest/autorun"
 require "mocha/minitest"
 require "minitest/reporters"
+require 'minitest/unit'
 Minitest::Reporters.use! Minitest::Reporters::SpecReporter.new
 require "timecop"
 require "logger"

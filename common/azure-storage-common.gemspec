@@ -39,18 +39,20 @@ Gem::Specification.new do |s|
   s.files       = `git ls-files ./lib/azure/storage/common/`.split("\n") << "./lib/azure/storage/common.rb"
   s.files       += `git ls-files ./lib/azure/core/`.split("\n") << "./lib/azure/core.rb" << "./lib/azure/http_response_helper.rb"
 
-  s.required_ruby_version = ">= 2.3.0"
+  s.required_ruby_version = ">= 3.4.0"
 
-  s.add_runtime_dependency('faraday',                 '~> 1.0')
-  s.add_runtime_dependency('faraday_middleware',      "~> 1.0", ">= 1.0.0.rc1")
-  s.add_runtime_dependency("net-http-persistent",     '~> 4.0')
-  s.add_runtime_dependency("nokogiri",                "~> 1", ">= 1.10.8")
-  s.add_development_dependency("dotenv",              "~> 2.0")
-  s.add_development_dependency("minitest",            "~> 5")
-  s.add_development_dependency("minitest-reporters",  "~> 1")
-  s.add_development_dependency("mocha",               "~> 1.0")
-  s.add_development_dependency("rake",                "~> 13.0")
-  s.add_development_dependency("timecop",             "~> 0.7")
-  s.add_development_dependency("yard",                "~> 0.9", ">= 0.9.11")
-  s.add_development_dependency('bundler',             '~> 1.11')
+  s.add_runtime_dependency('faraday',                     '~> 2.0')
+  s.add_runtime_dependency('faraday-follow_redirects',    '~> 0.5')
+  s.add_runtime_dependency('faraday-net_http_persistent', '~> 2.0')
+  s.add_runtime_dependency("net-http-persistent",         '~> 4.0')
+  s.add_runtime_dependency("nokogiri",                    "~> 1", ">= 1.10.8")
+  s.add_development_dependency("dotenv",                  "~> 2.0")
+  s.add_development_dependency("minitest",                "~> 5")
+  s.add_development_dependency("minitest-reporters",      "~> 1")
+  s.add_development_dependency("mocha",                   "~> 1.0")
+  s.add_development_dependency("rake",                    "~> 13.0")
+  s.add_development_dependency("timecop",                 "~> 0.7")
+  s.add_development_dependency("yard",                    "~> 0.9", ">= 0.9.11")
+  s.add_development_dependency('bundler',                 '~> 1.11')
+  s.add_development_dependency('base64',                  '~> 0.3')
 end
